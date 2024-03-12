@@ -8,8 +8,8 @@ sky:
     password: WZPqq2859572179
   alioss:
       endpoint: oss-cn-hangzhou.aliyuncs.com
-      access-key-id: LTAI5tSWaiT4qiTyzV7kTvdf
-      access-key-secret: gIQjqP0L3RceglQ3RDgDIAmf1vmv2s
+      access-key-id: 
+      access-key-secret: 
       bucket-name: wzp-sky-takeout
   redis:
     host: localhost
