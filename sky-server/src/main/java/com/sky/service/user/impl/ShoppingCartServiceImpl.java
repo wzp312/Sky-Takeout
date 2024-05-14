@@ -29,6 +29,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
      * 添加购物车
      * @param shoppingCartDTO
      * */
+    @Override
     public void addShoppingCart(ShoppingCartDTO shoppingCartDTO) {
         ShoppingCart shoppingCart = new ShoppingCart();
         BeanUtils.copyProperties(shoppingCartDTO, shoppingCart);
@@ -69,10 +70,13 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
      * 查看购物车
      * @return
      */
+    @Override
     public List<ShoppingCart> showShoppingCart() {
         return shoppingCartMapper.list(ShoppingCart.builder().userId(BaseContext.getCurrentId()).build());
     }
 
-
-
+    @Override
+    public void cleanShoppingCart() {
+        shoppingCartMapper.cleanById(BaseContext.getCurrentId());
+    }
 }

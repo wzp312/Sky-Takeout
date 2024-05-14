@@ -12,7 +12,13 @@ public interface ShoppingCartService {
 
     /**
      * 查看购物车
-     * @return */
+     * @return
+     * */
     List<ShoppingCart> showShoppingCart();
 
+    /**
+     * 清空购物车
+     * @return
+     */
+    void cleanShoppingCart();
 }
