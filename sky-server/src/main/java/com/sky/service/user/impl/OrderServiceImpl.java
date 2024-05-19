@@ -87,6 +87,9 @@ public class OrderServiceImpl implements OrderService {
         //向明细表插入n条数据
         orderDetailMapper.insertBatch(orderDetailList);
 
+        //清理购物车中的数据
+        shoppingCartMapper.cleanById(userId);
+
         //封装返回结果
         OrderSubmitVO orderSubmitVO = OrderSubmitVO.builder()
                 .id(order.getId())
