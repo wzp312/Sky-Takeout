@@ -44,7 +44,7 @@ public class OrderServiceImpl implements OrderService {
      * @param ordersSubmitDTO
      * @return
      */
-    @Transactional
+    //@Transactional
     @Override
     public OrderSubmitVO submitOrder(OrdersSubmitDTO ordersSubmitDTO) {
         //异常情况的处理（收货地址为空、购物车为空）
